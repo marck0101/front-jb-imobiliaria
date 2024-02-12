@@ -1,17 +1,3 @@
-/*
-=========================================================
-* Material Kit 2 PRO React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-pro-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -41,7 +27,8 @@ function ContactUs() {
           routes={routes}
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-pro-react",
+          route: "",
+          // route: "https://www.creative-tim.com/product/material-kit-pro-react",
             label: "buy now",
             color: "info",
           }}

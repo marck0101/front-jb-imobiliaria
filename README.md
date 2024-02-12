@@ -80,6 +80,21 @@
 }
 }
 
+"name": "material-kit-2-pro-react",
+"version": "2.1.0",
+"private": true,
+"author": "Creative Tim",
+"license": "See license in https://www.creative-tim.com/license",
+"description": "React version of Material Kit 2 PRO by Creative Tim",
+"homepage": "https://demos.creative-tim.com/material-kit-pro-react/#/",
+"bugs": {
+"url": "https://github.com/creativetimofficial/ct-material-kit-pro-react/issues"
+},
+"repository": {
+"type": "git",
+"url": "git+https://github.com/creativetimofficial/ct-material-kit-pro-react.git"
+},
+
 # GIT
 
 ## Comandos basicos
