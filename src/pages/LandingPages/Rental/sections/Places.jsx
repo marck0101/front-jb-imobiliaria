@@ -36,7 +36,7 @@ import product6 from "assets/images/products/product-7-min.jpg";
 function Places() {
   const actionProps = {
     type: "internal",
-    route: "/rental",
+    route: "/",
     // route: "/pages/landing-pages/rental",
     color: "info",
     label: "from / night",

@@ -115,7 +115,7 @@ const routes = [
           // },
           {
             name: "Menu",
-            route: "/rental",
+            route: "/",
             // route: "/pages/landing-pages/rental",
             component: <Rental />,
           },
