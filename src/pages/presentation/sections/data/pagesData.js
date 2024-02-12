@@ -25,7 +25,7 @@ export default [
   {
     image: `${imagesPrefix}/rental.jpg`,
     name: "Rental Page",
-    route: "/rental",
+    route: "/",
     // route: "/pages/landing-pages/rental",
   },
   {
