@@ -37,8 +37,8 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const [nestedDropdownEl, setNestedDropdownEl] = useState("");
   const [nestedDropdownName, setNestedDropdownName] = useState("");
   const [arrowRef, setArrowRef] = useState(null);
-  const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
+  const [mobileNavbar, setMobileNavbar] = useState(false);
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
 

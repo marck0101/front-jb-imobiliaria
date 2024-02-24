@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 
 // react-router components
@@ -14,6 +13,7 @@ import Presentation from "layouts/pages/presentation";
 
 // Material Kit 2 PRO React routes
 import routes from "routes";
+import InfCard from "pages/LandingPages/Rental/infCard";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -42,10 +42,7 @@ export default function App() {
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
-        {/* <Route path="/presentation" element={<Presentation />} /> */}
-        {/* <Route path="*" element={<Navigate to="/presentation" />} /> */}
-        {/* <Route path="*" element={<Navigate to="/pages/landing-pages/rental" />} /> */}
-        {/* <Route path="*" element={<Navigate to="/" />} /> */}
+        <Route path="/inf/*" element={<InfCard />} />
       </Routes>
     </ThemeProvider>
   );

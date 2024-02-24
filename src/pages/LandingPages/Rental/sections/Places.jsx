@@ -1,12 +1,11 @@
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
 // Material Kit 2 PRO React components
+// import MKPagination from "components/MKPagination";
 import MKBox from "components/MKBox";
-import MKPagination from "components/MKPagination";
 
 // Material Kit 2 PRO React components
 import SimpleBookingCard from "examples/Cards/BookingCards/SimpleBookingCard";
@@ -20,13 +19,13 @@ import product5 from "assets/images/products/product-6-min.jpg";
 import product6 from "assets/images/products/product-7-min.jpg";
 
 function Places() {
-  const actionProps = {
+  const createActionProps = (idCard) => ({
     type: "internal",
-    route: "/",
-    // route: "/pages/landing-pages/rental",
+    route: `/inf/${idCard}`, // `/inf${idCard}`
     color: "info",
-    label: "from / night",
-  };
+    label: "Verificar",
+    idCard: idCard,
+  });
 
   return (
     <MKBox component="section" py={3}>
@@ -39,7 +38,7 @@ function Places() {
                 title="Lindo e acolhedor apartamento"
                 description="Casa nova, perto do centro, texto textotextoo texto texto textotextoo texto, texto textotextoo texto texto textotextoo texto."
                 categories={["Apartamento inteiro", " 3 Hóspedes", "2 Camas"]}
-                action={actionProps}
+                action={createActionProps("1")}
               />
             </MKBox>
           </Grid>
@@ -51,7 +50,7 @@ function Places() {
                 description="Casa nova, perto do centro, texto textotextoo texto texto textotextoo texto, texto textotextoo texto texto textotextoo texto."
                 // description="As Uber works through a huge amount of internal management turmoil, the company is also consolidating more of its international business."
                 categories={["Private Room", "1 Guest", "1 Sofa"]}
-                action={actionProps}
+                action={createActionProps("2")}
               />
             </MKBox>
           </Grid>
@@ -63,7 +62,7 @@ function Places() {
                 description="Casa nova, perto do centro, texto textotextoo texto texto textotextoo texto, texto textotextoo texto texto textotextoo texto."
                 // description="Music is something that every person has his or her own specific opinion about. Different people have different taste, and various types of music."
                 categories={["Entire Apartment", "4 Guests", "2 Beds"]}
-                action={actionProps}
+                action={createActionProps("3")}
               />
             </MKBox>
           </Grid>
@@ -75,7 +74,7 @@ function Places() {
                 description="Casa nova, perto do centro, texto textotextoo texto texto textotextoo texto, texto textotextoo texto texto textotextoo texto."
                 // description="Fast forward, rewind and more, without having to first invoke a specific skill, or even press a button on their remote."
                 categories={["Entire Apartment", "2 Guests", "1 Bed"]}
-                action={actionProps}
+                action={createActionProps("4")}
               />
             </MKBox>
           </Grid>
@@ -87,7 +86,7 @@ function Places() {
                 description="Casa nova, perto do centro, texto textotextoo texto texto textotextoo texto, texto textotextoo texto texto textotextoo texto."
                 // description="Today, the company announced it will be combining its rides-on-demand business, specific skill and UberEATS."
                 categories={["Entire Flat", "8 Guests", "3 Rooms"]}
-                action={actionProps}
+                action={createActionProps("5")}
               />
             </MKBox>
           </Grid>
@@ -99,31 +98,58 @@ function Places() {
                 description="Casa nova, perto do centro, texto textotextoo texto texto textotextoo texto, texto textotextoo texto texto textotextoo texto."
                 // description="Different people have different taste, and various types of music have many ways of leaving an impact on someone."
                 categories={["Entire Apartment", "2 Guests", "1 Bed"]}
-                action={actionProps}
+                action={createActionProps("6")}
               />
             </MKBox>
           </Grid>
         </Grid>
-        <MKBox mt={5}>
-          <MKPagination>
-            <MKPagination item>
-              <Icon>keyboard_arrow_left</Icon>
-            </MKPagination>
-            <MKPagination item active>
-              1
-            </MKPagination>
-            <MKPagination item>2</MKPagination>
-            <MKPagination item>3</MKPagination>
-            <MKPagination item>4</MKPagination>
-            <MKPagination item>5</MKPagination>
-            <MKPagination item>
-              <Icon>keyboard_arrow_right</Icon>
-            </MKPagination>
-          </MKPagination>
-        </MKBox>
       </Container>
     </MKBox>
   );
 }
 
 export default Places;
+{
+  /* 
+  
+    const posts = [
+    {
+      _id: 123,
+      image: { name: product2 },
+      title: { name: "Lindo e acolhedor apartamento" },
+      description: { name: "Lindo e acolhedor apartamento" },
+      categories: { name: ["Apartamento inteiro", " 3 Hóspedes", "2 Camas"] },
+      action: { actionProps },
+    },
+    {
+      _id: 123,
+      image: { name: product3 },
+      title: { name: "Lindo e acolhedor apartamento" },
+      description: { name: "Lindo e acolhedor apartamento" },
+      categories: { name: ["Apartamento inteiro", " 3 Hóspedes", "2 Camas"] },
+      action: { actionProps },
+    },
+  ];
+  
+  
+  
+  {posts.map((item) => {
+              return (
+                <>
+                  <Grid spacing={3} sx={{ mt: 3 }}>
+                    <Grid item xs={12} md={6} lg={4}>
+                      <MKBox mt={3}>
+                        <SimpleBookingCard
+                          image={item?.image.name}
+                          title={item.title.name}
+                          description={item.description.name}
+                          categories={item.name}
+                          action={item.action}
+                        />
+                      </MKBox>
+                    </Grid>
+                  </Grid>
+                </>
+              );
+            })} */
+}

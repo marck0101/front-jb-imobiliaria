@@ -6,6 +6,7 @@ import Rental from "layouts/pages/landing-pages/rental";
 
 // Account
 import SignInBasicPage from "layouts/authentication/sign-in/basic";
+import InfCard from "pages/LandingPages/Rental/infCard";
 
 const routes = [
   {
@@ -24,7 +25,6 @@ const routes = [
           },
         ],
       },
-      
     ],
   },
   {
@@ -40,16 +40,10 @@ const routes = [
             route: "/authentication/sign-in/basic",
             component: <SignInBasicPage />,
           },
-        
         ],
       },
-   
     ],
   },
 
- 
-
- 
 ];
-
 export default routes;
