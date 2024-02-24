@@ -1,29 +1,18 @@
 import Container from "@mui/material/Container";
 import MKBox from "components/MKBox";
 import Grid from "@mui/material/Grid";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
-import MKButton from "components/MKButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
 import bgImage from "assets/images/bg-rental.jpeg";
 import Card from "@mui/material/Card";
-import Places from "pages/LandingPages/Rental/sections/Places";
 
-import product2 from "assets/images/products/product-2-min.jpg";
-import SimpleBookingCard from "examples/Cards/BookingCards/SimpleBookingCard";
 import MKTypography from "components/MKTypography";
-import Faq from "../sections/Faq";
 import Contact from "../sections/Contact";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
 
 const InfCard = () => {
-  const navigate = useNavigate();
 
-  const voltar = () => {
-    navigate("/");
-  };
 
   return (
     <>

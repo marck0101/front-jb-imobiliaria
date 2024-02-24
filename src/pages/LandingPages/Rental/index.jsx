@@ -14,8 +14,6 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Rental page sections
-import Search from "pages/LandingPages/Rental/sections/Search";
-import Testimonials from "pages/LandingPages/Rental/sections/Testimonials";
 import Places from "pages/LandingPages/Rental/sections/Places";
 import Faq from "pages/LandingPages/Rental/sections/Faq";
 import Contact from "pages/LandingPages/Rental/sections/Contact";
