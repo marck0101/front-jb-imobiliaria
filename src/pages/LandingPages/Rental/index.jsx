@@ -15,8 +15,8 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 
 // Rental page sections
 import Search from "pages/LandingPages/Rental/sections/Search";
-import Places from "pages/LandingPages/Rental/sections/Places";
 import Testimonials from "pages/LandingPages/Rental/sections/Testimonials";
+import Places from "pages/LandingPages/Rental/sections/Places";
 import Faq from "pages/LandingPages/Rental/sections/Faq";
 import Contact from "pages/LandingPages/Rental/sections/Contact";
 
@@ -35,7 +35,6 @@ function Rental() {
         action={{
           type: "external",
           route: "/",
-          // route: "https://www.creative-tim.com/product/material-kit-pro-react",
           label: "Mais informações",
           color: "info",
         }}

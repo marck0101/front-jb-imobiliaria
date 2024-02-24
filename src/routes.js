@@ -30,8 +30,7 @@ const routes = [
   {
     name: "Conta",
     icon: <Icon>contacts</Icon>,
-    collapse: [
-      {
+    
         name: "sign in",
         dropdown: true,
         collapse: [
@@ -41,8 +40,7 @@ const routes = [
             component: <SignInBasicPage />,
           },
         ],
-      },
-    ],
+    
   },
 
 ];
