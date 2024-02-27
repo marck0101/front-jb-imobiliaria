@@ -13,6 +13,7 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import footerRoutes from "footer.routes";
 import { useEffect, useState } from "react";
 import { getAllInfs } from "../../../../helpers/FakeApi";
+import CardContent from "assets/theme/components/card/cardContent";
 
 const InfCard = () => {
   const pegaInfId = `${location.pathname.split("/")[2]}`;
@@ -107,24 +108,43 @@ const InfCard = () => {
           return (
             <Grid>
               <Grid item>
-                <MKBox
-                  component="img"
-                  alt="lake house"
-                  src={item.image}
-                  width={{ xs: "100%", lg: "50%" }}
-                  height={{ xs: "100%", lg: "100%" }}
-                  //   position="absolute"
-                  right={0}
-                  bottom={{ xs: "-25%", lg: "unset" }}
-                  top={{ xs: 0, lg: "unset" }}
-                  sx={{
-                    objectFit: "cover",
-                    borderTopLeftRadius: ({ borders: { borderRadius } }) => ({
-                      xs: 0,
-                      lg: borderRadius.lg,
-                    }),
-                  }}
-                />
+                <Card>
+                  <Grid container style={{ display: "flex", flexDirection: "row" }}>
+                    <Grid item>
+                      <MKBox
+                        component="img"
+                        alt="lake house"
+                        src={item.image}
+                        width={{ xs: "100%", lg: "50%" }}
+                        height={{ xs: "100%", lg: "100%" }}
+                        //   position="absolute"
+                        right={0}
+                        bottom={{ xs: "-25%", lg: "unset" }}
+                        top={{ xs: 0, lg: "unset" }}
+                        sx={{
+                          objectFit: "cover",
+                          borderTopLeftRadius: ({ borders: { borderRadius } }) => ({
+                            xs: 0,
+                            lg: borderRadius.lg,
+                          }),
+                        }}
+                      />
+                    </Grid>
+                    <Grid item>
+                      <h1>Teste</h1>
+                      <Grid container style={{marginLeft: -380}} >
+                        <Grid item style={{display:'flex', flexDirection: 'row', }}>
+                          <div>testeaaa</div>
+                          <div>testeaaa</div>
+                          <div>testeaaa</div>
+                          <div>testeaaa</div>
+                          <div>testeaaa</div>
+                          <div>testeaaa</div>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Card>
               </Grid>
             </Grid>
           );
