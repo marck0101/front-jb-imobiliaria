@@ -23,7 +23,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
-import bgImage from "assets/images/bg-rental.jpeg";
+import bgImageI from "assets/images/key.png";
 
 function Rental() {
   return (
@@ -47,7 +47,7 @@ function Rental() {
             `${linearGradient(
               rgba(gradients.dark.main, 0.5),
               rgba(gradients.dark.state, 0.5)
-            )}, url(${bgImage})`,
+            )}, url(${bgImageI})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "grid",
