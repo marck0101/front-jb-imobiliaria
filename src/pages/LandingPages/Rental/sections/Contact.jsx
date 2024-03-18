@@ -9,6 +9,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import ImgContact from "assets/images/contatoII.jpg"
 
 function Contact() {
   return (
@@ -25,7 +26,7 @@ function Contact() {
       <MKBox
         component="img"
         alt="lake house"
-        src="https://images.unsplash.com/photo-1539803442075-48618f39bb3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=963&amp;q=80"
+        src={ImgContact}
         width={{ xs: "100%", lg: "50%" }}
         height={{ xs: "100%", lg: "100%" }}
         position="absolute"

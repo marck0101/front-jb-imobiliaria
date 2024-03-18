@@ -3,7 +3,7 @@ import MKBox from "components/MKBox";
 import Grid from "@mui/material/Grid";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import routes from "routes";
-import bgImage from "assets/images/bg-rental.jpeg";
+import bgImage from "assets/images/key.png";
 import Card from "@mui/material/Card";
 
 import { DiCode } from "react-icons/di";
@@ -106,47 +106,51 @@ const InfCard = () => {
       >
         {data?.map((item) => {
           return (
-            <Grid>
-              <Grid item>
-                <Card>
-                  <Grid container style={{ display: "flex", flexDirection: "row" }}>
-                    <Grid item>
-                      <MKBox
-                        component="img"
-                        alt="lake house"
-                        src={item.image}
-                        width={{ xs: "100%", lg: "50%" }}
-                        height={{ xs: "100%", lg: "100%" }}
-                        //   position="absolute"
-                        right={0}
-                        bottom={{ xs: "-25%", lg: "unset" }}
-                        top={{ xs: 0, lg: "unset" }}
-                        sx={{
-                          objectFit: "cover",
-                          borderTopLeftRadius: ({ borders: { borderRadius } }) => ({
-                            xs: 0,
-                            lg: borderRadius.lg,
-                          }),
-                        }}
-                      />
+            <Card>
+              <Grid container >
+                <Grid item lg={6} xs={12}>
+                  <MKBox
+                    component="img"
+                    alt="lake house"
+                    src={item.image}
+                    width={{ xs: "100%", lg: "100%" }}
+                    height={{ xs: "100%", lg: "100%" }}
+                    //   position="absolute"
+                    right={0}
+                    bottom={{ xs: "-25%", lg: "unset" }}
+                    top={{ xs: 0, lg: "unset" }}
+                    sx={{
+                      objectFit: "cover",
+                      borderTopLeftRadius: ({ borders: { borderRadius } }) => ({
+                        xs: 0,
+                        lg: borderRadius.lg,
+                      }),
+                    }}
+                  />
+                </Grid>
+
+                <Grid item lg={6} xs={12}>
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <h1>Teste</h1>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection:'row'}}>
+                    <Grid xs={6} style={{ marginLeft: "2%" }}>
+                      <p>bla bla bla</p>
+                      <p>bla bla blabla bla blabla </p>
+                      <p>bla bla bla</p>
+                      <p>bla bla blabla bla blabla </p>
                     </Grid>
-                    <Grid item>
-                      <h1>Teste</h1>
-                      <Grid container style={{marginLeft: -380}} >
-                        <Grid item style={{display:'flex', flexDirection: 'row', }}>
-                          <div>testeaaa</div>
-                          <div>testeaaa</div>
-                          <div>testeaaa</div>
-                          <div>testeaaa</div>
-                          <div>testeaaa</div>
-                          <div>testeaaa</div>
-                        </Grid>
-                      </Grid>
+                    <Grid xs={6} style={{ marginLeft: "2%" }}>
+                      <p>bla bla bla</p>
+                      <p>bla bla blabla bla blabla </p>
+                      <p>bla bla bla</p>
+                      <p>bla bla blabla bla blabla </p>
                     </Grid>
-                  </Grid>
-                </Card>
+                  </div>
+                </Grid>
               </Grid>
-            </Grid>
+            </Card>
           );
         })}
         <Grid
