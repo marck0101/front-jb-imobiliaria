@@ -107,7 +107,7 @@ const InfCard = () => {
         {data?.map((item) => {
           return (
             <Card>
-              <Grid container >
+              <Grid container>
                 <Grid item lg={6} xs={12}>
                   <MKBox
                     component="img"
@@ -125,6 +125,10 @@ const InfCard = () => {
                         xs: 0,
                         lg: borderRadius.lg,
                       }),
+                      borderBottomLeftRadius: ({ borders: { borderRadius } }) => ({
+                        xs: 0,
+                        lg: borderRadius.lg,
+                      }),
                     }}
                   />
                 </Grid>
@@ -134,7 +138,7 @@ const InfCard = () => {
                     <h1>Teste</h1>
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection:'row'}}>
+                  <div style={{ display: "flex", flexDirection: "row" }}>
                     <Grid xs={6} style={{ marginLeft: "2%" }}>
                       <p>bla bla bla</p>
                       <p>bla bla blabla bla blabla </p>
