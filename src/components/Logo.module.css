@@ -1,0 +1,35 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--verde-escuro);
+}
+
+.logo:hover {
+  color: var(--verde-escuro);
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.nome {
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+
+.sub {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dourado);
+}
+
+.claro,
+.claro:hover {
+  color: var(--branco);
+}

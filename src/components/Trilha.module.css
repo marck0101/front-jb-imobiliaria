@@ -1,0 +1,35 @@
+.trilha ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  color: var(--texto-nota);
+}
+
+.trilha li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.trilha li + li::before {
+  content: "/";
+  color: var(--linha);
+}
+
+.trilha a {
+  color: var(--texto-suave);
+}
+
+.trilha a:hover {
+  color: var(--verde);
+  text-decoration: underline;
+}
+
+.trilha span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60vw;
+}

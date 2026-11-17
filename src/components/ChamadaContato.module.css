@@ -1,0 +1,45 @@
+.faixa {
+  position: relative;
+  overflow: hidden;
+  background: var(--verde);
+  color: rgba(247, 244, 238, 0.85);
+}
+
+/* Telhado do logo como grafismo, bem discreto */
+.faixa::before {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  width: 320px;
+  height: 320px;
+  border-top: 22px solid rgba(184, 134, 47, 0.18);
+  border-left: 22px solid rgba(184, 134, 47, 0.18);
+  transform: translateY(-15%) rotate(45deg);
+  pointer-events: none;
+}
+
+.interno {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+  padding-block: clamp(2.5rem, 6vw, 3.75rem);
+}
+
+.interno h2 {
+  color: var(--branco);
+  margin-bottom: 0.5rem;
+}
+
+.interno p {
+  max-width: 560px;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
