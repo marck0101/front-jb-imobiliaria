@@ -43,7 +43,7 @@ Contexto do projeto para o Claude Code. Leia antes de mexer. Uso e estrutura: `R
 
 ## 5. Deploy (Vercel)
 
-- Projeto Vercel já ligado ao repositório (`.vercel/project.json`). Ao levar esta branch para a `main`, **mudar o Framework Preset do projeto para Next.js** em Settings → Build and Deployment (estava configurado para Create React App) e conferir a versão do Node (20.x ou 22.x).
+- Projeto Vercel já ligado ao repositório (`.vercel/project.json`). O painel estava configurado como Create React App: o `vercel.json` com `"framework": "nextjs"` sobrepõe isso pelo código (sem ele o deploy falha). Mesmo assim, vale ajustar o Framework Preset no painel (Settings → Build and Deployment) e conferir o Node (20.x ou 22.x).
 - Variáveis no Vercel: `NEXT_PUBLIC_SITE_URL`. **Não** definir `JB_MOSTRAR_EXEMPLOS`.
 - Push em branch que não é a `main` gera só uma prévia (preview), sem afetar o site no ar.
 
