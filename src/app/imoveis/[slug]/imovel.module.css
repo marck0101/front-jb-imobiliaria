@@ -1,0 +1,292 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-block: clamp(1.5rem, 4vw, 2.5rem) clamp(3rem, 8vw, 5rem);
+}
+
+.avisoExemplo {
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--raio);
+  background: #f7e3df;
+  color: var(--alerta);
+  font-size: 0.95rem;
+}
+
+.cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.selos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.selo {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.venda {
+  background: var(--verde);
+  color: var(--branco);
+}
+
+.aluguel {
+  background: var(--dourado);
+  color: var(--branco);
+}
+
+.status {
+  background: var(--dourado-claro);
+}
+
+.titulo {
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+}
+
+.local {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  color: var(--texto-suave);
+}
+
+.local svg {
+  flex-shrink: 0;
+  color: var(--dourado);
+}
+
+/* conteúdo + lateral fixa no desktop */
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .grade {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: start;
+    gap: 2.5rem;
+  }
+
+  .lateral {
+    position: sticky;
+    top: 96px;
+  }
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+}
+
+.destaques {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.destaques li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  background: var(--branco);
+  color: var(--texto-suave);
+}
+
+.destaques svg {
+  color: var(--verde);
+}
+
+.destaques strong {
+  color: var(--tinta);
+}
+
+.bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--linha);
+}
+
+.bloco h2 {
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+}
+
+.bloco > p {
+  max-width: 70ch;
+  color: var(--texto-suave);
+}
+
+.caracteristicas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.6rem 1.5rem;
+}
+
+.caracteristicas li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: var(--texto-suave);
+}
+
+.caracteristicas li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.35em;
+  width: 0.55rem;
+  height: 0.95rem;
+  border-right: 2.2px solid var(--verde);
+  border-bottom: 2.2px solid var(--verde);
+  transform: rotate(45deg);
+}
+
+.ficha {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  background: var(--branco);
+}
+
+/* Linhas entre as células sem pintar a célula vazia do fim */
+.ficha div {
+  padding: 0.85rem 1rem;
+  box-shadow: 1px 1px 0 var(--linha);
+}
+
+.ficha dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-nota);
+}
+
+.ficha dd {
+  font-weight: 600;
+  color: var(--tinta);
+}
+
+.mapa {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--raio-g);
+  background: var(--verde-claro);
+}
+
+/* --- cartão de preço e contato --- */
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  border-radius: var(--raio-g);
+  background: var(--branco);
+  border: 1px solid var(--linha);
+  box-shadow: var(--sombra);
+}
+
+.precoRotulo {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-nota);
+}
+
+.preco {
+  margin-top: -0.4rem;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.9rem, 4vw, 2.3rem);
+  line-height: 1.1;
+  color: var(--verde);
+  font-variant-numeric: tabular-nums;
+}
+
+.custos {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.indisponivel {
+  padding: 0.75rem;
+  border-radius: var(--raio);
+  background: var(--dourado-claro);
+  font-size: 0.92rem;
+}
+
+.cta {
+  width: 100%;
+  border-radius: var(--raio);
+}
+
+.codigo {
+  font-size: 0.82rem;
+  color: var(--texto-nota);
+  text-align: center;
+}
+
+/* --- barra fixa no celular --- */
+
+.barraMobile {
+  position: sticky;
+  bottom: 0;
+  z-index: 40;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem var(--gutter) calc(0.75rem + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid var(--linha);
+  box-shadow: 0 -8px 24px -12px rgba(19, 40, 35, 0.25);
+}
+
+.barraMobile div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.barraMobile span {
+  font-size: 0.75rem;
+  color: var(--texto-nota);
+}
+
+.barraMobile strong {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: var(--verde);
+  white-space: nowrap;
+}
+
+@media (max-width: 1023px) {
+  .barraMobile {
+    display: flex;
+  }
+}
